@@ -1,0 +1,15 @@
+{
+  "name": "praveen-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Praveen Kakulandala's personal software engineering portfolio",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/server.mjs --dist",
+    "check": "node --check src/main.js && node --check src/content.js && node --check src/case-study.js && node --check src/gallery.js && node --check scripts/build.mjs && node --check scripts/server.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
