@@ -70,3 +70,9 @@ See [GitHub's workflow documentation](https://docs.github.com/en/pages/getting-s
 The updated Associate Software Engineer CV includes this clickable portfolio link alongside GitHub and LinkedIn:
 
 `Portfolio: https://praveenkakulandala.github.io/`
+
+## Yashika portfolio
+
+Yashika's portfolio is hosted at https://praveenkakulandala.github.io/yashika/ from the `yashika/` directory. This directory contains the public HTML, styles, JavaScript, favicon, and original CV PDF. The single **View CV** link opens the PDF in a new tab.
+
+Edit `yashika/index.html`, `yashika/src/`, and `yashika/assets/` here for future GitHub Pages updates. The build includes both portfolios in the same deployment. Preview Yashika's site at http://localhost:5173/yashika/.

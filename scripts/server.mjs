@@ -15,10 +15,15 @@ const server = http.createServer(async (request, response) => {
   }
   try {
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-    const relative = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
+    if (pathname === '/yashika') {
+      response.writeHead(301, { Location: '/yashika/' }).end();
+      return;
+    }
+    const relative = (pathname.endsWith('/') ? pathname + 'index.html' : pathname).replace(/^\/+/, '');
     const target = path.resolve(root, relative);
     const parts = path.relative(root, target).split(path.sep);
-    if (parts.includes('..') || parts.some(part => part.startsWith('.')) || !['index.html', 'src', 'assets', 'robots.txt'].includes(parts[0])) {
+    const publicParts = parts[0] === 'yashika' ? parts.slice(1) : parts;
+    if (parts.includes('..') || parts.some(part => part.startsWith('.')) || !['index.html', 'src', 'assets', 'robots.txt'].includes(publicParts[0])) {
       response.writeHead(404).end('Not found');
       return;
     }

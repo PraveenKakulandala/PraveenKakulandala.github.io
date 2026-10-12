@@ -9,7 +9,9 @@
     "start": "node scripts/server.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/server.mjs --dist",
-    "check": "node --check src/main.js && node --check src/content.js && node --check src/case-study.js && node --check src/gallery.js && node --check scripts/build.mjs && node --check scripts/server.mjs"
+    "check": "node --check src/main.js && node --check src/content.js && node --check src/case-study.js && node --check src/gallery.js && node --check scripts/build.mjs && node --check scripts/server.mjs && node --check yashika/src/main.js && node --check yashika/src/content.js"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }
